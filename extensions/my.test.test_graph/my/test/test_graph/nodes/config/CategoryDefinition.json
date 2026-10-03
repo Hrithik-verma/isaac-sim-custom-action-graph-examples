@@ -1,0 +1,6 @@
+{
+    "categoryDefinitions": {
+        "$description": "Categories used by the nodes in my.test.test_graph",
+        "myNodes": "My custom nodes"
+    }
+}

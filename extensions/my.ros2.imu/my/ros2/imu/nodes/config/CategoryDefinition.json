@@ -1,0 +1,6 @@
+{
+    "categoryDefinitions": {
+        "$description": "Categories used by the nodes in my.ros2.imu",
+        "myNodes": "My custom nodes"
+    }
+}

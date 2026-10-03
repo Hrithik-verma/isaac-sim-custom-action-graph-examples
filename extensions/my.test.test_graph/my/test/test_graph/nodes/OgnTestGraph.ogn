@@ -1,0 +1,45 @@
+{
+    "TestGraph": {
+        "version": 1,
+        "language": "python",
+        "icon": "icons/icon.svg",
+        "uiName": "Test Graph",
+        "description": "add 2 number",
+        "categoryDefinitions": "config/CategoryDefinition.json",
+        "categories": [
+            "myNodes",
+            "math:operator"
+        ],
+        "inputs": {
+            "execIn": {
+                "type": "execution",
+                "uiName": "Exec In",
+                "description": "Signal that triggers this node"
+            },
+            "u": {
+                "type": "double",
+                "uiName": "u",
+                "description": "u",
+                "default": 0
+            },
+            "v": {
+                "type": "double",
+                "uiName": "v",
+                "description": "v",
+                "default": 0
+            }
+        },
+        "outputs": {
+            "execOut": {
+                "type": "execution",
+                "uiName": "Exec Out",
+                "description": "Signal sent after this node runs"
+            },
+            "addition": {
+                "type": "string",
+                "uiName": "addition",
+                "description": "addition"
+            }
+        }
+    }
+}

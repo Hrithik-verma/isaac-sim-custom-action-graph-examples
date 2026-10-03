@@ -1,0 +1,55 @@
+{
+  "schema": 2,
+  "extension": {
+    "name": "my.test.test_graph",
+    "title": "My Test Graph",
+    "version": "0.1.0",
+    "description": "Custom OmniGraph nodes for Isaac Sim",
+    "authors": "rahul",
+    "category": "Graph",
+    "nodeCategory": "myNodes",
+    "nodeCategoryDescription": "My custom nodes"
+  },
+  "nodes": [
+    {
+      "name": "TestGraph",
+      "uiName": "Test Graph",
+      "description": "add 2 number",
+      "extraCategory": "math:operator",
+      "action": true,
+      "inputs": [
+        {
+          "name": "u",
+          "uiName": "",
+          "type": "double",
+          "default": "0.0",
+          "description": ""
+        },
+        {
+          "name": "v",
+          "uiName": "",
+          "type": "double",
+          "default": "0.0",
+          "description": ""
+        }
+      ],
+      "outputs": [
+        {
+          "name": "addition",
+          "uiName": "",
+          "type": "double",
+          "default": "",
+          "description": ""
+        }
+      ],
+      "ros": {
+        "enabled": false,
+        "role": "subscriber",
+        "msgType": "custom",
+        "customType": "sensor_msgs/msg/Imu",
+        "topic": "/my_topic"
+      }
+    }
+  ],
+  "generator": "1.1.0"
+}

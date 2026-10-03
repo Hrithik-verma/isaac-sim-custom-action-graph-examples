@@ -1,0 +1,69 @@
+{
+  "schema": 2,
+  "extension": {
+    "name": "my.ros2.imu",
+    "title": "Imu",
+    "version": "0.1.0",
+    "description": "Custom OmniGraph nodes for Isaac Sim",
+    "authors": "rahul",
+    "category": "Graph",
+    "nodeCategory": "myNodes",
+    "nodeCategoryDescription": "My custom nodes"
+  },
+  "nodes": [
+    {
+      "name": "ImuPublisher",
+      "uiName": "Imu Publisher",
+      "description": "my ros2 imu publisher",
+      "extraCategory": "math:operator",
+      "action": true,
+      "inputs": [
+        {
+          "name": "angular_velocity_vector",
+          "uiName": "angular velocity vector",
+          "type": "vectord[3]",
+          "default": "[0.0, 0.0, 0.0]",
+          "description": ""
+        },
+        {
+          "name": "linear_velocity_vector",
+          "uiName": "",
+          "type": "vectord[3]",
+          "default": "[0.0, 0.0, 0.0]",
+          "description": ""
+        },
+        {
+          "name": "orientation_quaternion",
+          "uiName": "",
+          "type": "quatd[4]",
+          "default": "[0.0, 0.0, 0.0, 1.0]",
+          "description": ""
+        },
+        {
+          "name": "sensor_time",
+          "uiName": "",
+          "type": "float",
+          "default": "0.0",
+          "description": ""
+        },
+        {
+          "name": "frame_id",
+          "uiName": "",
+          "type": "string",
+          "default": "imu_link",
+          "description": ""
+        }
+      ],
+      "outputs": [],
+      "ros": {
+        "enabled": true,
+        "role": "publisher",
+        "msgType": "custom",
+        "customType": "sensor_msgs/msg/Imu",
+        "msgDefinition": "",
+        "topic": "/imu"
+      }
+    }
+  ],
+  "generator": "1.2.0"
+}

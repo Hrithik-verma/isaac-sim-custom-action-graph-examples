@@ -1,0 +1,77 @@
+{
+    "ImuPublisher": {
+        "version": 1,
+        "language": "python",
+        "icon": "icons/icon.svg",
+        "uiName": "Imu Publisher",
+        "description": "my ros2 imu publisher",
+        "categoryDefinitions": "config/CategoryDefinition.json",
+        "categories": [
+            "myNodes",
+            "math:operator"
+        ],
+        "inputs": {
+            "execIn": {
+                "type": "execution",
+                "uiName": "Exec In",
+                "description": "Signal that triggers this node"
+            },
+            "topicName": {
+                "type": "token",
+                "uiName": "Topic Name",
+                "description": "ROS 2 topic to publish on",
+                "default": "/imu"
+            },
+            "angular_velocity_vector": {
+                "type": "vectord[3]",
+                "uiName": "angular velocity vector",
+                "description": "angular velocity vector",
+                "default": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "linear_velocity_vector": {
+                "type": "vectord[3]",
+                "uiName": "linear velocity vector",
+                "description": "linear velocity vector",
+                "default": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "orientation_quaternion": {
+                "type": "quatd[4]",
+                "uiName": "orientation quaternion",
+                "description": "orientation quaternion",
+                "default": [
+                    0,
+                    0,
+                    0,
+                    1
+                ]
+            },
+            "sensor_time": {
+                "type": "float",
+                "uiName": "sensor time",
+                "description": "sensor time",
+                "default": 0
+            },
+            "frame_id": {
+                "type": "string",
+                "uiName": "frame id",
+                "description": "frame id",
+                "default": "imu_link"
+            }
+        },
+        "outputs": {
+            "execOut": {
+                "type": "execution",
+                "uiName": "Exec Out",
+                "description": "Signal sent after this node runs"
+            }
+        }
+    }
+}
