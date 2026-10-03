@@ -32,10 +32,10 @@
                     0
                 ]
             },
-            "linear_velocity_vector": {
+            "linear_acceleration_vector": {
                 "type": "vectord[3]",
-                "uiName": "linear velocity vector",
-                "description": "linear velocity vector",
+                "uiName": "linear acceleration vector",
+                "description": "linear acceleration vector",
                 "default": [
                     0,
                     0,

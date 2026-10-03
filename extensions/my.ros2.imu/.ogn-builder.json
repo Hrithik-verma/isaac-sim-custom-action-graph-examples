@@ -26,7 +26,7 @@
           "description": ""
         },
         {
-          "name": "linear_velocity_vector",
+          "name": "linear_acceleration_vector",
           "uiName": "",
           "type": "vectord[3]",
           "default": "[0.0, 0.0, 0.0]",

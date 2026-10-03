@@ -73,7 +73,7 @@ msg.header.stamp.sec = int(sensor_time)
 msg.header.stamp.nanosec = int((sensor_time - int(sensor_time)) * 1e9)
 msg.orientation.x = float(orientation_quaternion[0])        # OmniGraph quatd[4] is x, y, z, w
 msg.angular_velocity.x = float(angular_velocity_vector[0])
-msg.linear_acceleration.x = float(linear_velocity_vector[0])
+msg.linear_acceleration.x = float(linear_acceleration_vector[0])
 ...
 state.publisher.publish(msg)
 ```

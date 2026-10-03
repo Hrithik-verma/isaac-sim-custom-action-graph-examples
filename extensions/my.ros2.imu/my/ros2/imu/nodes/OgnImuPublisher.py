@@ -96,7 +96,7 @@ class OgnImuPublisher:
             # 1. Read input values
             topic_name = db.inputs.topicName
             angular_velocity_vector = db.inputs.angular_velocity_vector
-            linear_velocity_vector = db.inputs.linear_velocity_vector
+            linear_acceleration_vector = db.inputs.linear_acceleration_vector
             orientation_quaternion = db.inputs.orientation_quaternion
             sensor_time = db.inputs.sensor_time
             frame_id = db.inputs.frame_id
@@ -118,9 +118,9 @@ class OgnImuPublisher:
             msg.angular_velocity.x = float(angular_velocity_vector[0])
             msg.angular_velocity.y = float(angular_velocity_vector[1])
             msg.angular_velocity.z = float(angular_velocity_vector[2])
-            msg.linear_acceleration.x = float(linear_velocity_vector[0])
-            msg.linear_acceleration.y = float(linear_velocity_vector[1])
-            msg.linear_acceleration.z = float(linear_velocity_vector[2])
+            msg.linear_acceleration.x = float(linear_acceleration_vector[0])
+            msg.linear_acceleration.y = float(linear_acceleration_vector[1])
+            msg.linear_acceleration.z = float(linear_acceleration_vector[2])
             state.publisher.publish(msg)
 
             # 3. Write output values
